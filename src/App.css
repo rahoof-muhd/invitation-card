@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700;800&family=Dancing+Script&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #efe1d1;
+  --panel: #f4e8dc;
+  --panel-strong: #d7b99c;
+  --text: #4a382a;
+  --muted: #7c6957;
+  --shadow: rgba(0, 0, 0, 0.12);
+}
+
+.invite-page {
+  min-height: 100vh;
+  width: 100%;
+  padding: 48px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #efe1d1 0%, #f7eee5 50%, #efe1d1 100%);
+}
+
+.cards-wrap {
+  width: min(1160px, 100%);
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.invite-card,
+.save-card {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 28px;
+  box-shadow: 0 26px 70px var(--shadow);
+  overflow: hidden;
+}
+
+.invite-card::before,
+.invite-card::after,
+.save-card::before,
+.save-card::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+}
+
+.invite-card::before {
+  top: -18px;
+  left: -18px;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle at 35% 35%, rgba(190, 151, 110, 0.12), transparent 34%),
+    radial-gradient(circle at 70% 55%, rgba(220, 189, 145, 0.14), transparent 20%);
+  border-radius: 50%;
+}
+
+.invite-card::after {
+  bottom: -20px;
+  right: -22px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle at 40% 40%, rgba(189, 149, 106, 0.14), transparent 28%),
+    radial-gradient(circle at 63% 62%, rgba(224, 204, 176, 0.12), transparent 18%);
+  border-radius: 50%;
+}
+
+.save-card::before {
+  top: -20px;
+  right: 16px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle at 50% 40%, rgba(168, 122, 80, 0.14), transparent 32%),
+    radial-gradient(circle at 30% 65%, rgba(224, 194, 162, 0.12), transparent 18%);
+  border-radius: 50%;
+}
+
+.save-card::after {
+  bottom: -16px;
+  left: 14px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle at 35% 34%, rgba(178, 131, 91, 0.14), transparent 28%),
+    radial-gradient(circle at 62% 68%, rgba(234, 210, 186, 0.12), transparent 24%);
+  border-radius: 50%;
+}
+
+.invite-card {
+  padding: 56px 52px;
+}
+
+.plant-branch {
+  position: absolute;
+  display: flex;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.branch-top {
+  top: 28px;
+  left: 28px;
+}
+
+.branch-bottom {
+  bottom: 28px;
+  right: 28px;
+}
+
+.save-branch {
+  top: 22px;
+  left: 22px;
+}
+
+.leaf {
+  display: block;
+  width: 20px;
+  height: 48px;
+  border-radius: 50% 50% 40% 40%;
+  background: linear-gradient(180deg, #d9c0a0 10%, #cba37d 80%);
+  box-shadow: 0 8px 18px rgba(109, 78, 49, 0.12);
+}
+
+.leaf-1 {
+  transform: rotate(-20deg) scale(1.1);
+}
+
+.leaf-2 {
+  transform: rotate(14deg) scale(0.95);
+}
+
+.leaf-3 {
+  transform: rotate(22deg) scale(1.05);
+}
+
+.leaf-4 {
+  transform: rotate(-8deg) scale(0.95);
+}
+
+.leaf-5 {
+  transform: rotate(-14deg) scale(0.95);
+}
+
+.leaf-6 {
+  transform: rotate(18deg) scale(1.05);
+}
+
+.card-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.meta-text,
+.save-label {
+  margin: 0;
+  color: var(--muted);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+.couple-name {
+  margin: 18px 0 0;
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(3rem, 5vw, 5rem);
+  color: var(--text);
+  line-height: 0.92;
+}
+
+.invite-copy {
+  max-width: 520px;
+  margin: 24px auto 0;
+  color: #6b5a4d;
+  font-size: 1rem;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  font-family: 'Inter', sans-serif;
+}
+
+.time-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin: 34px auto 0;
+}
+
+.time-label,
+.year {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--text);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}
+
+.date-stack {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(187, 147, 111, 0.32);
+  border-radius: 20px;
+  padding: 18px 20px;
+  min-width: 110px;
+}
+
+.day,
+.month {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.date {
+  margin: 6px 0;
+  font-size: 2rem;
+  line-height: 1;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.venue-block {
+  text-align: center;
+  margin: 36px auto 0;
+}
+
+.venue-name {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  color: var(--text);
+}
+
+.venue-address {
+  margin: 10px auto 0;
+  color: #6b5a4d;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.closing-text {
+  margin: 34px auto 0;
+  color: #6b5a4d;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.save-card {
+  padding: 58px 40px;
+  background: #d6ba98;
+  display: grid;
+  place-items: center;
+}
+
+.save-inner {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  padding: 40px 28px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  border-radius: 24px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.save-title {
+  margin: 18px 0 0;
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(3rem, 6vw, 4.2rem);
+  color: var(--text);
+  line-height: 0.95;
+}
+
+.save-couple {
+  margin: 24px 0 0;
+  color: #5d4c40;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
+.save-date {
+  margin: 10px 0 0;
+  color: #6d5a4a;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 960px) {
+  .cards-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .invite-card,
+  .save-card {
+    border-radius: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .invite-page {
+    padding: 28px 16px;
+  }
+
+  .invite-card,
+  .save-card {
+    padding: 32px 20px;
+  }
+
+  .couple-name {
+    font-size: clamp(2.4rem, 10vw, 3.5rem);
+  }
+
+  .save-inner {
+    padding: 30px 18px;
+  }
+}
