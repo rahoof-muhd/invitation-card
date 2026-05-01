@@ -1,5 +1,6 @@
 import './App.css'
 import butterflies from './assets/butterflies.png'
+import bismillah from './assets/bismillah.png'
 
 function App() {
   return (
@@ -14,10 +15,17 @@ function App() {
             <span className="leaf leaf-4"></span>
           </div>
           <div className="card-inner">
-            <p className="meta-text-bismi">بِسْمِ ٱللّٰهِ ٱلرَّحْمٰنِ ٱلرَّحِيمِ</p>
-            <p>In the name of Allah, the Most Gracious, the Most Merciful</p>
+            {/* <p className="meta-text-bismi">بِسْمِ ٱللّٰهِ ٱلرَّحْمٰنِ ٱلرَّحِيمِ</p> */}
+            <img src={bismillah} alt="Bismillah" className="bismillah-image" />
+            <p className='meta-text1'>In the name of Allah, the Most Gracious, the Most Merciful</p>
             <p className="meta-text">Together with their families</p>
-            <h1 className="couple-name">Ashin & Shahma</h1>
+            <h1 className="couple-name">
+              <span className="groom">Ashin</span>
+              <br/>
+              <span className="name-divider">&amp;</span>
+              <br/>
+              <span className="bride">Shahma</span>
+            </h1>
             <p className="invite-copy">
              Request the pleasure of your company at their wedding ceremony
             </p>
@@ -37,7 +45,7 @@ function App() {
               <p className="venue-address">Lakkidi, Ottapalam</p>
             </div>
 
-            <p className="closing-text">Reception to follow</p>
+            {/* <p className="closing-text">Reception to follow</p> */}
           </div>
         </article>
 
