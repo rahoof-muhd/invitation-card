@@ -435,62 +435,87 @@
   }
 
   .couple-name-div {
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(
-    135deg,
-    #f5e6a8 0%,
-    #e6c76a 25%,
-    #d4af37 50%,
-    #e6c76a 75%,
-    #fff2c2 100%
-  );
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    /* padding: 3vh 0; */
-    border-radius: 50%;
-    height: 28vh;
-    width: 28vh;
-    margin: auto;
-    /* align-items: center; */
-    position: relative;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
-  }
-
-  .couple-name-div::before {
-  content: "";
-  position: absolute;
-  inset: -3px;
+  height: 28vh;
+  width: 28vh;
+  margin: auto;
   border-radius: 50%;
 
-  background: linear-gradient(
-    45deg,
-    #ffd700,
-    #fff2c2,
-    #d4af37,
-    #fff2c2,
-    #ffd700
+  /* Deep luxury gold */
+  background: radial-gradient(circle at 30% 30%, 
+    #fff5cc 0%, 
+    #f0d98a 25%, 
+    #d4af37 55%, 
+    #b8962e 75%, 
+    #8c6b1f 100%
   );
 
-  z-index: -1;
-  animation: rotateBorder 4s linear infinite;
+  box-shadow:
+    inset 0 2px 8px rgba(255,255,255,0.4),
+    inset 0 -4px 10px rgba(0,0,0,0.25),
+    0 10px 25px rgba(0,0,0,0.25);
+
+  overflow: hidden;
+}
+
+ .couple-name-div::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(255,255,255,0.5) 50%,
+    transparent 60%
+  );
+
+  transform: rotate(25deg);
+  animation: goldShimmer 4s ease-in-out infinite;
 }
 
 /* Inner mask to keep center clean */
 .couple-name-div::after {
   content: "";
   position: absolute;
-  inset: 3px;
-  background: inherit;
+  inset: 0;
   border-radius: 50%;
-  z-index: -1;
+
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+  animation: glowPulse 3s ease-in-out infinite;
 }
 
-@keyframes rotateBorder {
+@keyframes goldShimmer {
   0% {
-    transform: rotate(0deg);
+    transform: translateX(-60%) rotate(25deg);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(60%) rotate(25deg);
+    opacity: 0;
   }
   100% {
-    transform: rotate(360deg);
+    transform: translateX(60%) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(255, 215, 0, 0.6);
   }
 }
 
