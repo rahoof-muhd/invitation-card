@@ -1,27 +1,52 @@
 import './App.css'
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import butterflies from './assets/butterflies.png'
 import bismillah from './assets/bismillah.png'
 import topcorner from './assets/top-corner.png'
 
 function App() {
+
+  const audioRef = useRef(null);
   const [open, setOpen] = useState(false);
+
+ const openCurtain = () => {
+   setOpen(true);
+ 
+   setTimeout(() => {
+     if (audioRef.current) {
+       audioRef.current.volume = 0.2;
+       audioRef.current.play().catch((err) => {
+         console.log("Audio play blocked:", err);
+       });
+     }
+   }, 500); // small delay makes it reliable
+ };
+
+  const [muted, setMuted] = useState(false);
+
 
   return (
     <>
       {/* 🎭 Curtain */}
+     <audio
+        ref={audioRef}
+        src="/assets/song.mp3"
+        loop
+        preload="auto"
+        muted={muted}
+      />
       <div className={`curtain ${open ? "open" : ""}`}>
-        <div className="curtain-left" onClick={() => setOpen(true)}></div>
-        <div className="curtain-right" onClick={() => setOpen(true)}></div>
+        <div className="curtain-left" onClick={openCurtain}></div>
+        <div className="curtain-right" onClick={openCurtain}></div>
 
         {!open && (
-          <div className="curtain-text" onClick={() => setOpen(true)}>
+          <div className="curtain-text" onClick={openCurtain}>
             JOIN OUR STORY
           </div>
         )}
       </div>
-
+      
       {/* 🎉 Main Content */}
       <main className={`invite-page ${open ? "show" : "hide"}`}>
         <div className="butterfly-wrapper">
