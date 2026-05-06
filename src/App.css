@@ -265,8 +265,9 @@
   font-size: 1rem;
   line-height: 1.9;
   letter-spacing: 0.02em;
-   font-family: cursive;
+  font-family: cursive;
   font-style: italic;
+  text-align: center;
 }
 
 .time-block {
@@ -405,6 +406,12 @@
   font-family: cursive;
   font-style: italic;
 }
+.meta-text{
+  margin-bottom: 2vh;
+}
+.corner-top{
+  display: none;
+}
 
 @media (max-width: 960px) {
   .cards-wrap {
@@ -427,11 +434,163 @@
     padding: 32px 20px;
   }
 
+  .couple-name-div {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(
+    135deg,
+    #f5e6a8 0%,
+    #e6c76a 25%,
+    #d4af37 50%,
+    #e6c76a 75%,
+    #fff2c2 100%
+  );
+
+    /* padding: 3vh 0; */
+    border-radius: 50%;
+    height: 28vh;
+    width: 28vh;
+    margin: auto;
+    /* align-items: center; */
+    position: relative;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  }
+
+  .couple-name-div::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    45deg,
+    #ffd700,
+    #fff2c2,
+    #d4af37,
+    #fff2c2,
+    #ffd700
+  );
+
+  z-index: -1;
+  animation: rotateBorder 4s linear infinite;
+}
+
+/* Inner mask to keep center clean */
+.couple-name-div::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: inherit;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
   .couple-name {
     font-size: clamp(2.4rem, 10vw, 3.5rem);
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    
   }
 
   .save-inner {
     padding: 30px 18px;
   }
+  .butterfly-wrapper{
+    height: 80px;
+    width: 80px;
+    top: 10px;
+    left: 1px;
+    display: none;
+  }
+  .bismillah-image{
+    max-width: 170px;
+    margin-bottom: 5vh;
+  }
+  .invite-copy,.meta-text1 {
+    line-height:17px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .plant-branch {
+    display:none;
+  }
+  .invite-card{
+    min-height: 83vh;
+    border: 3px solid rgba(215, 176, 58, 0.85);
+    padding: 5px 10px 5px 10px;
+    border-radius: 2px;
+  }
+  .corner-top{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .corner-bottom{
+    display: flex;
+    justify-content: space-between;
+  }
+  /* .corner-top-left,
+.corner-top-right {
+  width: 120px;
+  height: 120px;
+  border-top: 2px solid #c9a646;
+  border-left: 2px solid #c9a646;
+  position: relative;
+}
+
+.corner-top-right {
+  border-left: none;
+  border-right: 2px solid #c9a646;
+}
+
+.corner-top-left::after,
+.corner-top-right::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #c9a646;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+} */
+
+.corner-top .corner-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+.corner-top-left .corner-image {
+  transform: rotate(270deg);
+}
+.corner-bottom{
+  position: relative;
+  top: 0vh;
+  /* background-color: blue; */
+  /* display: none; */
+}
+.corner-bottom .corner-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+.corner-bottom-left .corner-image {
+  transform: rotate(900deg);
+}
+.corner-bottom-right .corner-image {
+  transform: rotate(90deg);
+}
+.card-inner{
+  /* background-color: red; */
+  top: -7vh;
+  height: 48.5vh;
+}
 }
