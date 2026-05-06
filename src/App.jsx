@@ -108,8 +108,74 @@ function App() {
             <div className="save-inner">
               <p className="save-label">Save the</p>
               <h2 className="save-title">Date</h2>
-              <p className="save-couple">Ashin & Shahma</p>
-              <p className="save-date">FRI | 07 | JUN</p>
+
+              <div className="calendar-card">
+                <div className="calendar-header">
+                  <span className="calendar-month-label">June 2026</span>
+                </div>
+
+                <div className="calendar-weekdays">
+                  <span>Mo</span>
+                  <span>Tu</span>
+                  <span>We</span>
+                  <span>Th</span>
+                  <span>Fr</span>
+                  <span>Sa</span>
+                  <span>Su</span>
+                </div>
+
+                <div className="calendar-days">
+                  <span>1</span>
+                  <span>2</span>
+                  <span>3</span>
+                  <span>4</span>
+                  <span>5</span>
+                  <span>6</span>
+                  <span className="marked-day">
+                    <span className="heart-icon">❤</span>
+                  </span>
+                  <span>8</span>
+                  <span>9</span>
+                  <span>10</span>
+                  <span>11</span>
+                  <span>12</span>
+                  <span>13</span>
+                  <span>14</span>
+                  <span>15</span>
+                  <span>16</span>
+                  <span>17</span>
+                  <span>18</span>
+                  <span>19</span>
+                  <span>20</span>
+                  <span>21</span>
+                  <span>22</span>
+                  <span>23</span>
+                  <span>24</span>
+                  <span>25</span>
+                  <span>26</span>
+                  <span>27</span>
+                  <span>28</span>
+                  <span>29</span>
+                  <span>30</span>
+                </div>
+              </div>
+
+              {/* <p className="save-couple">Ashin & Shahma</p> */}
+            </div>
+          </article>
+
+          <article className="venue-card">
+            <div className="venue-content">
+              <h3 className="venue-heading">Venue</h3>
+              
+              <div className="venue-details">
+                <p className="venue-title">ASCO Convention Center</p>
+                <p className="venue-location">
+                  Toll Gate, near Ottappalam-Mayannur Bridge
+                </p>
+              </div>
+
+              <a href="#" className="map-link">View on Map →</a>
             </div>
           </article>
         </div>
