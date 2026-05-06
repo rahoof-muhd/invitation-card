@@ -221,7 +221,7 @@
 .couple-name .bride {
   display: inline-block;
   opacity: 0;
-  animation-duration: 0.9s;
+  animation-duration: 4s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
 }
@@ -638,5 +638,129 @@
   /* background-color: red; */
   top: -7vh;
   height: 48.5vh;
+}
+
+
+/* 🎭 Curtain Base */
+.curtain {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* 🎨 Silk fabric look */
+.curtain-left,
+.curtain-right {
+  width: 50%;
+  height: 100%;
+  position: relative;
+
+  background: linear-gradient(
+    120deg,
+    #5a3e1b 0%,
+    #7a5a2a 25%,
+    #a67c1b 50%,
+    #7a5a2a 75%,
+    #5a3e1b 100%
+  );
+
+  transition: transform 1.4s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+/* ✨ Fabric folds effect */
+.curtain-left::before,
+.curtain-right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.08) 2px,
+    transparent 2px,
+    transparent 6px
+  );
+
+  opacity: 0.3;
+}
+
+/* ✨ Golden shine sweep */
+.curtain-left::after,
+.curtain-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(255, 223, 120, 0.25) 50%,
+    transparent 60%
+  );
+
+  animation: curtainShine 4s infinite;
+}
+
+@keyframes curtainShine {
+  0% { transform: translateX(-60%); }
+  100% { transform: translateX(60%); }
+}
+
+/* 🎬 Opening animation */
+.curtain.open .curtain-left {
+  transform: translateX(-100%);
+}
+
+.curtain.open .curtain-right {
+  transform: translateX(100%);
+}
+
+/* 📝 Text */
+.curtain-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  color: #f5e6a8;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  cursor: pointer;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  animation: fadePulse 2s infinite;
+}
+
+@keyframes fadePulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* 💡 Light reveal effect */
+.invite-page.show {
+  opacity: 1;
+  transition: opacity 1s ease 0.8s;
+  animation: lightReveal 1.5s ease;
+}
+
+.invite-page.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes lightReveal {
+  0% {
+    filter: brightness(0.6) blur(4px);
+  }
+  100% {
+    filter: brightness(1) blur(0);
+  }
 }
 }
