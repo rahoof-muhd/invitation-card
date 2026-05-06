@@ -33,10 +33,8 @@ function App() {
             <p className="meta-text">Together with their families</p>
             <div className="couple-name-div">
               <h1 className="couple-name">
-                <span className="groom">Ashin</span>
-                <br/>
-                <span className="name-divider">&amp;</span>
-                <br/>
+                <span className="groom">Ashin</span><br/>
+                <span className="name-divider">&amp;</span><br/>
                 <span className="bride">Shahma</span>
               </h1>
             </div>

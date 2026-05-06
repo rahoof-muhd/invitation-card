@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700;800&family=Dancing+Script&family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap");
 :root {
   --bg: #efe1d1;
   --panel: #f4e8dc;
@@ -436,49 +438,49 @@
 
   .couple-name-div {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   height: 28vh;
   width: 28vh;
   margin: auto;
   border-radius: 50%;
 
-  /* Deep luxury gold */
-  background: radial-gradient(circle at 30% 30%, 
-    #fff5cc 0%, 
-    #f0d98a 25%, 
-    #d4af37 55%, 
-    #b8962e 75%, 
-    #8c6b1f 100%
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* ✨ Soft champagne gold */
+  background: radial-gradient(circle at 30% 30%,
+    #fff8e6 0%,     /* very light highlight */
+    #f7e7b5 35%,    /* soft gold */
+    #e8cf8a 65%,    /* mid tone */
+    #d6b45c 100%    /* gentle depth */
   );
 
+  /* soft depth (not heavy shadow) */
   box-shadow:
-    inset 0 2px 8px rgba(255,255,255,0.4),
-    inset 0 -4px 10px rgba(0,0,0,0.25),
-    0 10px 25px rgba(0,0,0,0.25);
+    inset 0 2px 6px rgba(255,255,255,0.5),
+    inset 0 -3px 6px rgba(0,0,0,0.1),
+    0 6px 15px rgba(0,0,0,0.15);
 
-  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.4);
 }
 
  .couple-name-div::before {
   content: "";
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
+  width: 180%;
+  height: 180%;
+  top: -40%;
+  left: -40%;
 
   background: linear-gradient(
     120deg,
-    transparent 40%,
-    rgba(255,255,255,0.5) 50%,
-    transparent 60%
+    transparent 48%,
+    rgba(255,255,255,0.2) 50%,
+    transparent 52%
   );
 
   transform: rotate(25deg);
-  animation: goldShimmer 4s ease-in-out infinite;
+  animation: shimmerSoft 7s ease-in-out infinite;
 }
 
 /* Inner mask to keep center clean */
@@ -490,6 +492,19 @@
 
   box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
   animation: glowPulse 3s ease-in-out infinite;
+}
+@keyframes shimmerSoft {
+  0% {
+    transform: translateX(-40%) rotate(25deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(40%) rotate(25deg);
+    opacity: 0;
+  }
 }
 
 @keyframes goldShimmer {
@@ -521,8 +536,14 @@
 
 
   .couple-name {
-    font-size: clamp(2.4rem, 10vw, 3.5rem);
-    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-size: 40px;
+    margin-bottom: 4vh;
+     font-family: 'Great Vibes', cursive;
+       /* font-family: 'Cormorant Garamond', serif; */
+
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #5a3e1b; 
     
   }
 
@@ -538,7 +559,7 @@
   }
   .bismillah-image{
     max-width: 170px;
-    margin-bottom: 5vh;
+    margin-bottom: 4vh;
   }
   .invite-copy,.meta-text1 {
     line-height:17px;
