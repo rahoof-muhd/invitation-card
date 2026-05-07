@@ -31,7 +31,7 @@ function App() {
       {/* 🎭 Curtain */}
      <audio
         ref={audioRef}
-        src="/assets/song1.mp3"
+        src="/assets/song.mp3"
         loop
         preload="auto"
         muted={muted}
