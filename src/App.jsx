@@ -31,7 +31,7 @@ function App() {
       {/* 🎭 Curtain */}
      <audio
         ref={audioRef}
-        src="/assets/song.mp3"
+        src="/assets/song1.mp3"
         loop
         preload="auto"
         muted={muted}
@@ -160,6 +160,15 @@ function App() {
                 </div>
               </div>
 
+              <a
+                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ashin%20%26%20Shahma%20Wedding%20Ceremony&dates=20260607/20260608&details=Request%20the%20pleasure%20of%20your%20company%20at%20their%20wedding%20ceremony&location=ASCO%20Convention%20Center%2C%20Toll%20Gate%2C%20near%20Ottappalam-Mayannur%20Bridge"
+                className="calendar-link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Add to Google Calendar
+              </a>
+
               {/* <p className="save-couple">Ashin & Shahma</p> */}
             </div>
           </article>
@@ -175,7 +184,14 @@ function App() {
                 </p>
               </div>
 
-              <a href="#" className="map-link">View on Map →</a>
+              <a
+                href="https://maps.app.goo.gl/dihaHXf3mAh8gwHx7"
+                className="map-link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View on Map →
+              </a>
             </div>
           </article>
         </div>
