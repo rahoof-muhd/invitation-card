@@ -42,9 +42,9 @@ function App() {
         <div className="curtain-right" onClick={openCurtain}></div>
 
         {!open && (
-          <div className="curtain-text" onClick={openCurtain}>
+          <span className="curtain-text" onClick={openCurtain}>
             JOIN OUR STORY
-          </div>
+          </span>
         )}
       </div>
       
