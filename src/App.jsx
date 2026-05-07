@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import butterflies from './assets/butterflies.png'
 import bismillah from './assets/bismillah.png'
 import topcorner from './assets/top-corner.png'
+import song from './assets/song.mp3'
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
       {/* 🎭 Curtain */}
      <audio
         ref={audioRef}
-        src="./assets/song.mp3"
+        src={song}
         loop
         preload="auto"
         muted={muted}
