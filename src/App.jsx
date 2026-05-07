@@ -4,12 +4,12 @@ import { useState, useRef } from "react";
 import butterflies from './assets/butterflies.png'
 import bismillah from './assets/bismillah.png'
 import topcorner from './assets/top-corner.png'
-import song from './assets/song.mp3'
 
 function App() {
 
   const audioRef = useRef(null);
   const [open, setOpen] = useState(false);
+  const audioSrc = `${import.meta.env.BASE_URL}assets/song.mp3`;
 
  const openCurtain = () => {
    setOpen(true);
@@ -32,7 +32,7 @@ function App() {
       {/* 🎭 Curtain */}
      <audio
         ref={audioRef}
-        src={song}
+        src={audioSrc}
         loop
         preload="auto"
         muted={muted}
@@ -42,9 +42,9 @@ function App() {
         <div className="curtain-right" onClick={openCurtain}></div>
 
         {!open && (
-          <div className="curtain-text" onClick={openCurtain}>
+          <span className="curtain-text" onClick={openCurtain}>
             JOIN OUR STORY
-          </div>
+          </span>
         )}
       </div>
       
