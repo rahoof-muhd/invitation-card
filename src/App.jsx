@@ -49,6 +49,17 @@ function App() {
       
       {/* 🎉 Main Content */}
       <main className={`invite-page ${open ? "show" : "hide"}`}>
+        <div className="romantic-floaters" aria-hidden="true">
+          <span className="floater floater-heart floater-1"></span>
+          <span className="floater floater-petal floater-2"></span>
+          <span className="floater floater-heart floater-3"></span>
+          <span className="floater floater-petal floater-4"></span>
+          <span className="floater floater-heart floater-5"></span>
+          <span className="floater floater-petal floater-6"></span>
+          <span className="floater floater-heart floater-7"></span>
+          <span className="floater floater-petal floater-8"></span>
+        </div>
+
         <div className="butterfly-wrapper">
           <img src={butterflies} alt="Butterflies" className="butterfly-image" />
         </div>
@@ -86,6 +97,10 @@ function App() {
                 Request the pleasure of your company <br/>
                 at their wedding ceremony
               </p>
+
+              <div className="scroll-cue" aria-hidden="true">
+                <span></span>
+              </div>
 
               <div className="venue-block">
                 <p className="venue-name">United Convention Centre</p>
