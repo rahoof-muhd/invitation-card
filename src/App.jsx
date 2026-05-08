@@ -10,7 +10,7 @@ function App() {
 
   const audioRef = useRef(null);
   const [open, setOpen] = useState(false);
-  const audioSrc = `${import.meta.env.BASE_URL}assets/song.mp`;
+  const audioSrc = `${import.meta.env.BASE_URL}assets/song.mp3`;
 
  const openCurtain = async () => {
   setOpen(true);
