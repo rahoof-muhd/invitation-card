@@ -1,5 +1,6 @@
 import './App.css'
 import { useState, useRef } from "react";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import butterflies from './assets/butterflies.png'
 import bismillah from './assets/bismillah.png'
@@ -11,18 +12,18 @@ function App() {
   const [open, setOpen] = useState(false);
   const audioSrc = `${import.meta.env.BASE_URL}assets/song.mp3`;
 
- const openCurtain = () => {
-   setOpen(true);
- 
-   setTimeout(() => {
-     if (audioRef.current) {
-       audioRef.current.volume = 0.2;
-       audioRef.current.play().catch((err) => {
-         console.log("Audio play blocked:", err);
-       });
-     }
-   }, 500); // small delay makes it reliable
- };
+ const openCurtain = async () => {
+  setOpen(true);
+
+  if (audioRef.current) {
+    try {
+      audioRef.current.volume = 0.05;
+      await audioRef.current.play();
+    } catch (err) {
+      console.log("Audio play blocked:", err);
+    }
+  }
+};
 
   const [muted, setMuted] = useState(false);
 
@@ -148,7 +149,7 @@ function App() {
                   <span>5</span>
                   <span>6</span>
                   <span className="marked-day">
-                    <span className="heart-icon">❤</span>
+                    <i className="fa-solid fa-heart heart-icon"></i>
                   </span>
                   <span>8</span>
                   <span>9</span>
@@ -206,7 +207,7 @@ function App() {
                 target="_blank"
                 rel="noreferrer"
               >
-                View on Map →
+                View on Map <i className="fa-solid fa-map-marker-alt"></i>
               </a>
             </div>
           </article>

@@ -783,7 +783,7 @@
 }
 
 .map-link::before {
-  content: "View on Map";
+  content: "View on Maps";
   font-size: 0.82rem;
 }
 
@@ -1642,7 +1642,7 @@
   display: inline-block;
   width: 18px;
   height: 18px;
-  font-size: 0;
+  font-size:15px;
   line-height: 0;
   animation: heartPulse 1.4s ease-in-out infinite;
 }
