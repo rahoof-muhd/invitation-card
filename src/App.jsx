@@ -17,7 +17,7 @@ function App() {
 
   if (audioRef.current) {
     try {
-      audioRef.current.volume = 0.05;
+      audioRef.current.volume = 0.5;
       await audioRef.current.play();
     } catch (err) {
       console.log("Audio play blocked:", err);
