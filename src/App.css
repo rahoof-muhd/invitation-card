@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap");
 :root {
   --bg: #efe1d1;
   --panel: #f4e8dc;
@@ -363,6 +364,8 @@
   position: relative;
   margin: 0;
   font-family: 'Great Vibes', cursive;
+  font-family: 'Cinzel Decorative', serif;
+
   font-size: clamp(3.35rem, 5.2vw, 5.25rem);
   font-weight: 400;
   color: #3f2716;
@@ -879,7 +882,7 @@
 
   .invite-card,
   .save-card {
-    padding: 32px 20px;
+    /* padding: 32px 20px; */
   }
 
   .venue-card {
@@ -1070,6 +1073,7 @@
     font-size: 42px;
     margin: 0;
      font-family: 'Great Vibes', cursive;
+     font-family: 'Cinzel Decorative', serif;
        /* font-family: 'Cormorant Garamond', serif; */
 
   font-weight: 400;
@@ -1557,7 +1561,7 @@
   content: "";
   position: absolute;
   inset: 9px;
-  border: 1px solid rgba(176, 130, 82, 0.16);
+  /* border: 1px solid rgba(176, 130, 82, 0.16); */
   border-radius: 16px;
   pointer-events: none;
 }
@@ -1574,14 +1578,14 @@
   justify-content: center;
   min-height: 32px;
   padding: 0 18px;
-  border-radius: 999px;
-  background: rgba(255, 248, 236, 0.68);
-  border: 1px solid rgba(176, 130, 82, 0.18);
+  /* border-radius: 999px; */
+  /* background: rgba(255, 248, 236, 0.68); */
+  /* border: 1px solid rgba(176, 130, 82, 0.18); */
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   color: #4a382a;
-  box-shadow: 0 8px 18px rgba(42, 28, 17, 0.06);
+  /* box-shadow: 0 8px 18px rgba(42, 28, 17, 0.06); */
 }
 
 .calendar-weekdays {
@@ -1619,7 +1623,7 @@
   border-radius: 10px;
   /* background: rgba(255, 248, 236, 0.68); */
   /* border: 1px solid rgba(176, 130, 82, 0.12); */
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  /* box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55); */
 }
 
 .calendar-days span.marked-day {
