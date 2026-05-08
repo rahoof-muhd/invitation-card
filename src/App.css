@@ -1541,16 +1541,16 @@
 .calendar-card {
   position: relative;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.96);
+  /* background: rgba(255, 255, 255, 0.96); */
   /* background:
     linear-gradient(180deg, rgba(255, 250, 240, 0.94), rgba(241, 224, 204, 0.9)),
     radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.18), transparent 48%); */
-  border-radius: 22px;
+  /* border-radius: 22px; */
   padding: 1.15rem;
-  box-shadow:
+  /* box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.8),
-    0 14px 32px rgba(42, 28, 17, 0.1);
-  border: 1px solid rgba(176, 130, 82, 0.24);
+    0 14px 32px rgba(42, 28, 17, 0.1); */
+  /* border: 1px solid rgba(176, 130, 82, 0.24); */
 }
 
 .calendar-card::before {
@@ -1616,9 +1616,9 @@
   font-size: 0.9rem;
   font-weight: 600;
   color: #6b4b34;
-  border-radius: 12px;
-  background: rgba(255, 248, 236, 0.68);
-  border: 1px solid rgba(176, 130, 82, 0.12);
+  border-radius: 10px;
+  /* background: rgba(255, 248, 236, 0.68); */
+  /* border: 1px solid rgba(176, 130, 82, 0.12); */
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
 }
 
@@ -1702,5 +1702,605 @@
   .calendar-days span.marked-day {
     font-size: 0.9rem;
   }
+}
+}
+/* ===== DESKTOP RESPONSIVE FIX ===== */
+
+@media (min-width: 1024px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .invite-page {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .cards-wrap {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .invite-card {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .save-card {
+    width: 100%;
+    position: sticky;
+    top: 30px;
+  }
+
+  /* Hide butterfly animation on desktop */
+  .butterfly-wrapper,
+  .butterfly {
+    display: none !important;
+  }
+
+  /* Couple card */
+  .couple-name-div {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .couple-name {
+    font-size: clamp(4rem, 5vw, 6rem);
+    line-height: 1.05;
+  }
+
+  /* Corner floral alignment */
+  .top-corner-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 220px;
+    max-width: 30%;
+    object-fit: contain;
+    pointer-events: none;
+  }
+
+  .bottom-corner-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    max-width: 42%;
+    object-fit: contain;
+    pointer-events: none;
+  }
+
+  /* Venue responsive */
+  .venue-card {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .venue-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .venue-title {
+    font-size: clamp(2rem, 3vw, 3rem);
+  }
+
+  /* Calendar responsive */
+  .calendar-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .calendar {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .calendar-days,
+  .calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .calendar-dates span,
+  .calendar-days span {
+    min-width: 0;
+    font-size: 1rem;
+  }
+
+  /* Google button */
+  .google-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Prevent overflow everywhere */
+  img,
+  div,
+  section {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .corner-top{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .corner-bottom{
+    display: flex;
+    justify-content: space-between;
+  }
+  /* .corner-top-left,
+.corner-top-right {
+  width: 120px;
+  height: 120px;
+  border-top: 2px solid #c9a646;
+  border-left: 2px solid #c9a646;
+  position: relative;
+}
+
+.corner-top-right {
+  border-left: none;
+  border-right: 2px solid #c9a646;
+}
+
+.corner-top-left::after,
+.corner-top-right::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #c9a646;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+} */
+
+.corner-top .corner-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+.corner-top-left .corner-image {
+  transform: rotate(270deg);
+}
+.corner-bottom{
+  position: relative;
+  top: 0vh;
+  /* background-color: blue; */
+  /* display: none; */
+}
+.corner-bottom .corner-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+.corner-bottom-left .corner-image {
+  transform: rotate(900deg);
+}
+.corner-bottom-right .corner-image {
+  transform: rotate(90deg);
+}
+.invite-card{padding:10px}
+
+
+.curtain {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  z-index: 9999;
+  overflow: hidden;
+  visibility: visible;
+  perspective: 1200px;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 251, 242, 0.88), rgba(239, 225, 209, 0.72) 34%, rgba(178, 135, 82, 0.48) 100%);
+  transition: visibility 0s linear 0s;
+}
+
+.curtain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.72), transparent 18%),
+    radial-gradient(circle at 50% 50%, transparent 0 16%, rgba(178, 135, 70, 0.18) 17%, transparent 30%);
+  opacity: 0.58;
+  animation: curtainCenterGlow 3.8s ease-in-out infinite;
+}
+
+/* 🎨 Silk fabric look */
+.curtain-left,
+.curtain-right {
+  --curtain-dir: -1;
+  width: 50%;
+  height: 100%;
+  position: relative;
+
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.2), transparent 18%, rgba(122, 84, 39, 0.12) 72%, rgba(85, 54, 28, 0.2)),
+    repeating-linear-gradient(
+      96deg,
+      rgba(255, 255, 255, 0.18) 0 12px,
+      rgba(225, 195, 153, 0.2) 12px 24px,
+      rgba(151, 104, 58, 0.16) 24px 36px
+    ),
+    linear-gradient(135deg, #fff8ec 0%, #efd9bf 28%, #c9a46a 55%, #f5e6cf 78%, #b88745 100%);
+
+  box-shadow:
+    inset 0 0 42px rgba(255, 255, 255, 0.42),
+    inset 0 0 90px rgba(100, 61, 29, 0.16),
+    0 0 34px rgba(83, 48, 24, 0.14);
+  transform-style: preserve-3d;
+  transition:
+    transform 2.15s cubic-bezier(0.7, 0, 0.16, 1),
+    filter 1.2s ease,
+    opacity 1.2s ease;
+  animation: curtainWindPanel 6.4s ease-in-out infinite;
+}
+
+.curtain-left {
+  transform-origin: left center;
+}
+
+.curtain-right {
+  --curtain-dir: 1;
+  transform-origin: right center;
+}
+
+/* ✨ Fabric folds effect */
+.curtain-left::before,
+.curtain-right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(ellipse at 50% 50%, transparent 48%, rgba(78, 48, 24, 0.13) 100%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.24) 0 2px,
+      transparent 2px 10px,
+      rgba(103, 67, 35, 0.11) 10px 14px,
+      transparent 14px 28px
+    );
+
+  opacity: 0.58;
+  background-size: 100% 100%, 48px 100%;
+  animation: curtainFoldWind 6.4s ease-in-out infinite;
+}
+
+/* ✨ Golden shine sweep */
+.curtain-left::after,
+.curtain-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 18px;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(83, 48, 24, 0.18), rgba(255, 255, 255, 0.18), transparent);
+  opacity: 0.68;
+  animation: curtainInnerEdge 6.4s ease-in-out infinite;
+}
+
+.curtain-left::after {
+  right: -9px;
+}
+
+.curtain-right::after {
+  left: -9px;
+  background: linear-gradient(270deg, rgba(83, 48, 24, 0.18), rgba(255, 255, 255, 0.18), transparent);
+}
+
+@keyframes curtainWindPanel {
+  0%, 100% {
+    transform: translateX(0) skewX(0deg) rotateY(0deg) scaleX(1);
+    filter: brightness(1) saturate(1);
+  }
+  22% {
+    transform: translateX(calc(var(--curtain-dir) * 0.8%)) skewX(calc(var(--curtain-dir) * 1.1deg)) rotateY(calc(var(--curtain-dir) * -1.5deg)) scaleX(0.992);
+    filter: brightness(0.99) saturate(1.02);
+  }
+  46% {
+    transform: translateX(calc(var(--curtain-dir) * -1.8%)) skewX(calc(var(--curtain-dir) * -2.2deg)) rotateY(calc(var(--curtain-dir) * 2.8deg)) scaleX(1.022);
+    filter: brightness(1.035) saturate(1.06);
+  }
+  70% {
+    transform: translateX(calc(var(--curtain-dir) * 1.1%)) skewX(calc(var(--curtain-dir) * 1.4deg)) rotateY(calc(var(--curtain-dir) * -1.8deg)) scaleX(0.986);
+    filter: brightness(1.01) saturate(1.03);
+  }
+  86% {
+    transform: translateX(calc(var(--curtain-dir) * -0.6%)) skewX(calc(var(--curtain-dir) * -0.8deg)) rotateY(calc(var(--curtain-dir) * 1deg)) scaleX(1.006);
+  }
+}
+
+@keyframes curtainFoldWind {
+  0%, 100% {
+    background-position: 0 0, 0 0;
+  }
+  46% {
+    background-position: 0 0, calc(var(--curtain-dir) * 16px) 0;
+  }
+  70% {
+    background-position: 0 0, calc(var(--curtain-dir) * -10px) 0;
+  }
+}
+
+@keyframes curtainInnerEdge {
+  0%, 100% {
+    opacity: 0.52;
+    transform: translateX(0) scaleX(1);
+  }
+  46% {
+    opacity: 0.82;
+    transform: translateX(calc(var(--curtain-dir) * -5px)) scaleX(1.22);
+  }
+  70% {
+    opacity: 0.62;
+    transform: translateX(calc(var(--curtain-dir) * 3px)) scaleX(0.92);
+  }
+}
+
+@keyframes curtainCenterGlow {
+  0%, 100% {
+    opacity: 0.42;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.76;
+    transform: scale(1.04);
+  }
+}
+
+/* 🎬 Opening animation */
+.curtain.open .curtain-left {
+  animation: curtainPullOpen 2s cubic-bezier(0.76, 0, 0.12, 1) forwards;
+}
+
+.curtain.open .curtain-right {
+  animation: curtainPullOpen 2s cubic-bezier(0.76, 0, 0.12, 1) forwards;
+}
+
+.curtain.open {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.18s ease 1.78s, visibility 0s linear 1.96s;
+}
+
+.curtain.open .curtain-left::before,
+.curtain.open .curtain-right::before {
+  animation: curtainFoldsPullOpen 2s cubic-bezier(0.76, 0, 0.12, 1) forwards;
+}
+
+.curtain.open .curtain-left::after,
+.curtain.open .curtain-right::after {
+  animation: curtainEdgePullOpen 2s cubic-bezier(0.76, 0, 0.12, 1) forwards;
+}
+
+.curtain.open::before {
+  animation: curtainRevealFlash 1.1s ease forwards;
+}
+
+.curtain.open .curtain-text {
+  animation: curtainPromptOut 0.35s ease forwards;
+}
+
+@keyframes curtainRevealFlash {
+  0% {
+    opacity: 0.74;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.32);
+  }
+}
+
+@keyframes curtainPullOpen {
+  0% {
+    transform: translateX(0) skewX(0deg) rotateY(0deg) scaleX(1);
+    opacity: 1;
+    filter: brightness(1);
+  }
+  10% {
+    transform: translateX(calc(var(--curtain-dir) * 3%)) skewX(calc(var(--curtain-dir) * -1deg)) rotateY(calc(var(--curtain-dir) * 2deg)) scaleX(1.018);
+    opacity: 1;
+    filter: brightness(1.02);
+  }
+  34% {
+    transform: translateX(calc(var(--curtain-dir) * 32%)) skewX(calc(var(--curtain-dir) * 4.2deg)) rotateY(calc(var(--curtain-dir) * -7deg)) scaleX(0.94);
+    opacity: 1;
+    filter: brightness(1.05);
+  }
+  62% {
+    transform: translateX(calc(var(--curtain-dir) * 82%)) skewX(calc(var(--curtain-dir) * -3deg)) rotateY(calc(var(--curtain-dir) * 6deg)) scaleX(0.72);
+    opacity: 1;
+    filter: brightness(1.08);
+  }
+  82% {
+    transform: translateX(calc(var(--curtain-dir) * 112%)) skewX(calc(var(--curtain-dir) * 1.6deg)) rotateY(calc(var(--curtain-dir) * -3deg)) scaleX(0.54);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(var(--curtain-dir) * 126%)) skewX(0deg) rotateY(0deg) scaleX(0.5);
+    opacity: 1;
+    filter: brightness(1.1);
+  }
+}
+
+@keyframes curtainFoldsPullOpen {
+  0% {
+    opacity: 0.58;
+    background-size: 100% 100%, 48px 100%;
+    background-position: 0 0, 0 0;
+  }
+  34% {
+    opacity: 0.72;
+    background-size: 100% 100%, 36px 100%;
+    background-position: 0 0, calc(var(--curtain-dir) * 24px) 0;
+  }
+  62% {
+    opacity: 0.82;
+    background-size: 100% 100%, 22px 100%;
+    background-position: 0 0, calc(var(--curtain-dir) * 48px) 0;
+  }
+  100% {
+    opacity: 0.62;
+    background-size: 100% 100%, 14px 100%;
+    background-position: 0 0, calc(var(--curtain-dir) * 82px) 0;
+  }
+}
+
+@keyframes curtainEdgePullOpen {
+  0% {
+    width: 18px;
+    opacity: 0.68;
+    transform: translateX(0) scaleX(1);
+  }
+  34% {
+    width: 28px;
+    opacity: 0.82;
+    transform: translateX(calc(var(--curtain-dir) * -8px)) scaleX(1.35);
+  }
+  62% {
+    width: 48px;
+    opacity: 0.92;
+    transform: translateX(calc(var(--curtain-dir) * -20px)) scaleX(1.8);
+  }
+  100% {
+    width: 58px;
+    opacity: 0.9;
+    transform: translateX(calc(var(--curtain-dir) * -32px)) scaleX(2);
+  }
+}
+
+@keyframes curtainPromptOut {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -54%) scale(0.96);
+  }
+}
+
+/* 📝 Text */
+.curtain-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  color: #5a3e1b;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  cursor: pointer;
+  font-family: 'Cormorant Garamond', serif;
+
+  /* animation: fadePulse 2s infinite; */
+}
+
+.curtain-text::before,
+.curtain-text::after {
+  display: none;
+}
+
+@keyframes fadePulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+
+/* Calendar responsive */
+  .calendar-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .calendar {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .calendar-days,
+  .calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .calendar-dates span,
+  .calendar-days span {
+    min-width: 0;
+    font-size: 1rem;
+  }
+
+  
+.calendar-weekdays {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.4rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.calendar-weekdays span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #9d6a2f;
+  text-transform: uppercase;
+}
+.cards-wrap{
+  display: flex;
+  flex-direction: column;
+}
+.venue-content{
+  flex-direction: column;
+  width:max-content;
+  justify-content: center;
+}
+.venue-card{
+  display: flex;
+  justify-content: center;
+}
+.save-inner{
+  width:max-content;
+  margin:auto;
+}
+.calendar-days, .calendar-dates {
+  gap:40px
+}
+.calendar-card{
+  margin-top:2vh;
+}
+.calendar-header{
+  font-size:1.5rem;
+  margin-bottom:2vh;
+}
+.save-title {
+  font-size:3.5rem;
 }
 }
