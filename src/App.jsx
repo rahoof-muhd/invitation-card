@@ -10,14 +10,14 @@ function App() {
 
   const audioRef = useRef(null);
   const [open, setOpen] = useState(false);
-  const audioSrc = `${import.meta.env.BASE_URL}assets/song.mp3`;
+  const audioSrc = `${import.meta.env.BASE_URL}assets/song1.mp3`;
 
  const openCurtain = async () => {
   setOpen(true);
 
   if (audioRef.current) {
     try {
-      audioRef.current.volume = 1;
+      audioRef.current.volume = 0.5;
       await audioRef.current.play();
     } catch (err) {
       console.log("Audio play blocked:", err);
@@ -82,10 +82,10 @@ function App() {
               <img src={bismillah} alt="Bismillah" className="bismillah-image" />
 
               <p className='meta-text1'>
-                In the name of Allah, the Most Gracious, the Most Merciful
+                In the name of Allah, the Most Gracious, the Most Merciful Together with their families
               </p>
 
-              <p className="meta-text">Together with their families</p>
+              {/* <p className="meta-text">Together with their families</p> */}
 
               <div className="couple-name-div">
                 <h1 className="couple-name">
@@ -198,6 +198,9 @@ function App() {
                 <p className="venue-title">ASCO Convention Center</p>
                 <p className="venue-location">
                   Toll Gate, near Ottappalam-Mayannur Bridge
+                </p>
+                <p className="venue-time">
+                  Love awaits you <strong>11:00 AM</strong> Onwards
                 </p>
               </div>
 

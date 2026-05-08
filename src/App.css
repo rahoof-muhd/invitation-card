@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
 :root {
   --bg: #efe1d1;
   --panel: #f4e8dc;
@@ -364,7 +365,8 @@
   position: relative;
   margin: 0;
   font-family: 'Great Vibes', cursive;
-  font-family: 'Cinzel Decorative', serif;
+  font-family: 'Allura', cursive;
+  /* font-family: 'Cinzel Decorative', serif; */
 
   font-size: clamp(3.35rem, 5.2vw, 5.25rem);
   font-weight: 400;
@@ -1073,7 +1075,8 @@
     font-size: 42px;
     margin: 0;
      font-family: 'Great Vibes', cursive;
-     font-family: 'Cinzel Decorative', serif;
+     font-family: 'Allura', cursive;
+     /* font-family: 'Cinzel Decorative', serif; */
        /* font-family: 'Cormorant Garamond', serif; */
 
   font-weight: 400;
@@ -2307,4 +2310,12 @@
 .save-title {
   font-size:3.5rem;
 }
+}
+.venue-time{
+      font-size: 14px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    /* line-height: 14px; */
+    font-family: emoji;
+    margin-top: 13px;
 }
