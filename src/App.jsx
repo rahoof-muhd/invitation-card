@@ -10,14 +10,14 @@ function App() {
 
   const audioRef = useRef(null);
   const [open, setOpen] = useState(false);
-  const audioSrc = `${import.meta.env.BASE_URL}assets/song.mp3`;
+  const audioSrc = `${import.meta.env.BASE_URL}assets/song1.mp3`;
 
  const openCurtain = async () => {
   setOpen(true);
 
   if (audioRef.current) {
     try {
-      audioRef.current.volume = 1;
+      audioRef.current.volume = 0.5;
       await audioRef.current.play();
     } catch (err) {
       console.log("Audio play blocked:", err);
