@@ -97,7 +97,7 @@ function App() {
 
               <p className="invite-copy">
                 Request the pleasure of your company <br/>
-                at their wedding ceremony
+                at their wedding ceremony.
               </p>
 
               <div className="scroll-cue" aria-hidden="true">
