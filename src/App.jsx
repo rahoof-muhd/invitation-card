@@ -222,6 +222,7 @@ function App() {
         justifyContent: "center",
         gap: "12px",
         flexWrap: "wrap",
+        width:100%,
       }}
     >
       {/* WhatsApp Button */}
@@ -235,14 +236,14 @@ function App() {
           gap: "8px",
           padding: "10px 18px",
           borderRadius: "25px",
-          background: "#25D366",
+          background: "rgb(149 190 134)",
           color: "white",
           textDecoration: "none",
-          fontSize: "14px",
+          fontSize: "25px",
         }}
       >
         <i className="fa-brands fa-whatsapp"></i>
-        WhatsApp
+        
       </a>
 
       {/* Instagram Button */}
@@ -256,14 +257,14 @@ function App() {
           gap: "8px",
           padding: "10px 18px",
           borderRadius: "25px",
-          background: "#E1306C",
+          background: "rgb(206 123 226)",
           color: "white",
           textDecoration: "none",
-          fontSize: "14px",
+          fontSize: "25px",
         }}
       >
         <i className="fa-brands fa-instagram"></i>
-        Instagram
+      
       </a>
     </article>
         </div>
