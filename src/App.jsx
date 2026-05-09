@@ -215,58 +215,69 @@ function App() {
             </div>
           </article>
           <article
+  style={{
+    textAlign: "center",
+    marginTop: "20px",
+    width: "100%",
+  }}
+>
+  {/* First line (Heading) */}
+  <h2 style={{ marginBottom: "15px", fontWeight: "600" }}>
+    Create Your Invitation
+  </h2>
+
+  {/* Second line (Buttons) */}
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: "12px",
+      flexWrap: "wrap",
+    }}
+  >
+    {/* WhatsApp Button */}
+    <a
+      href="https://wa.me/917994221003"
+      target="_blank"
+      rel="noopener noreferrer"
       style={{
-        textAlign: "center",
-        marginTop: "20px",
-        display: "flex",
-        justifyContent: "center",
-        gap: "12px",
-        flexWrap: "wrap",
-        width:"100%",
+        display: "inline-flex",
+        alignItems: "center",
+        gap: "8px",
+        padding: "10px 18px",
+        borderRadius: "25px",
+        background: "rgb(80 61 56)",
+        color: "white",
+        textDecoration: "none",
+        fontSize: "18px",
       }}
     >
-      {/* WhatsApp Button */}
-      <a
-        href="https://wa.me/917994221003"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          gap: "8px",
-          padding: "10px 18px",
-          borderRadius: "25px",
-          background: "rgb(149 190 134)",
-          color: "white",
-          textDecoration: "none",
-          fontSize: "25px",
-        }}
-      >
-        <i className="fa-brands fa-whatsapp"></i>
-        
-      </a>
-
-      {/* Instagram Button */}
-      <a
-        href="https://instagram.com/rahoof_muhammed_"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          gap: "8px",
-          padding: "10px 18px",
-          borderRadius: "25px",
-          background: "rgb(206 123 226)",
-          color: "white",
-          textDecoration: "none",
-          fontSize: "25px",
-        }}
-      >
-        <i className="fa-brands fa-instagram"></i>
+      <i className="fa-brands fa-whatsapp"></i>
       
-      </a>
-    </article>
+    </a>
+
+    {/* Instagram Button */}
+    <a
+      href="https://instagram.com/rahoof_muhammed_"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: "8px",
+        padding: "10px 18px",
+        borderRadius: "25px",
+        background: "rgb(80 61 56)",
+        color: "white",
+        textDecoration: "none",
+        fontSize: "18px",
+      }}
+    >
+      <i className="fa-brands fa-instagram"></i>
+      
+    </a>
+  </div>
+</article>
         </div>
       </main>
     </>
