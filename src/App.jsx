@@ -219,10 +219,14 @@ function App() {
     textAlign: "center",
     marginTop: "20px",
     width: "100%",
+    background: "#3e2c27",
+    padding:"10px",
   }}
 >
   {/* First line (Heading) */}
-  <h2 style={{ marginBottom: "15px", fontWeight: "600" }}>
+  <h2 style={{ marginBottom: "15px", fontWeight: "600", fontFamily: "Cambria,Cochin,Georgia,Times,Times New Roman,serif",
+    color:"#ffffff",
+    fontSize:"16px" }}>
     Create Your Invitation
   </h2>
 
@@ -246,7 +250,7 @@ function App() {
         gap: "8px",
         padding: "10px 18px",
         borderRadius: "25px",
-        background: "rgb(80 61 56)",
+        // background: "rgb(80 61 56)",
         color: "white",
         textDecoration: "none",
         fontSize: "18px",
@@ -267,7 +271,7 @@ function App() {
         gap: "8px",
         padding: "10px 18px",
         borderRadius: "25px",
-        background: "rgb(80 61 56)",
+        // background: "rgb(80 61 56)",
         color: "white",
         textDecoration: "none",
         fontSize: "18px",
