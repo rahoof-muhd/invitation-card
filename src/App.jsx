@@ -222,7 +222,7 @@ function App() {
         justifyContent: "center",
         gap: "12px",
         flexWrap: "wrap",
-        width:100%,
+        width:"100%",
       }}
     >
       {/* WhatsApp Button */}
