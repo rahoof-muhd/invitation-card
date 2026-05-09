@@ -224,9 +224,9 @@ function App() {
   }}
 >
   {/* First line (Heading) */}
-  <h2 style={{ marginBottom: "15px", fontWeight: "600", fontFamily: "Cambria,Cochin,Georgia,Times,Times New Roman,serif",
+  <h2 style={{ marginBottom: "0px", fontWeight: "100", fontFamily: "Cambria,Cochin,Georgia,Times,Times New Roman,serif",
     color:"#ffffff",
-    fontSize:"16px" }}>
+    fontSize:"16px",fontStyle:"italic" }}>
     Create Your Invitation
   </h2>
 
@@ -253,7 +253,7 @@ function App() {
         // background: "rgb(80 61 56)",
         color: "white",
         textDecoration: "none",
-        fontSize: "18px",
+        fontSize: "25px",
       }}
     >
       <i className="fa-brands fa-whatsapp"></i>
@@ -274,7 +274,7 @@ function App() {
         // background: "rgb(80 61 56)",
         color: "white",
         textDecoration: "none",
-        fontSize: "18px",
+        fontSize: "25px",
       }}
     >
       <i className="fa-brands fa-instagram"></i>
