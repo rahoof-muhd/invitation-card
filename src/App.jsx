@@ -219,7 +219,8 @@ function App() {
     textAlign: "center",
     marginTop: "20px",
     width: "100%",
-    background: "#3e2c27",
+    background: "linear-gradient(135deg, rgb(62, 44, 39), rgb(141 110 100))",
+    borderRadius: "17px",
     padding:"10px",
   }}
 >
