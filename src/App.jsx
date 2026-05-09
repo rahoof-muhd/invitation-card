@@ -214,6 +214,58 @@ function App() {
               </a>
             </div>
           </article>
+          <article
+      style={{
+        textAlign: "center",
+        marginTop: "20px",
+        display: "flex",
+        justifyContent: "center",
+        gap: "12px",
+        flexWrap: "wrap",
+      }}
+    >
+      {/* WhatsApp Button */}
+      <a
+        href="https://wa.me/917994221003"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "8px",
+          padding: "10px 18px",
+          borderRadius: "25px",
+          background: "#25D366",
+          color: "white",
+          textDecoration: "none",
+          fontSize: "14px",
+        }}
+      >
+        <i className="fa-brands fa-whatsapp"></i>
+        WhatsApp
+      </a>
+
+      {/* Instagram Button */}
+      <a
+        href="https://instagram.com/rahoof_muhammed_"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "8px",
+          padding: "10px 18px",
+          borderRadius: "25px",
+          background: "#E1306C",
+          color: "white",
+          textDecoration: "none",
+          fontSize: "14px",
+        }}
+      >
+        <i className="fa-brands fa-instagram"></i>
+        Instagram
+      </a>
+    </article>
         </div>
       </main>
     </>
