@@ -10,7 +10,7 @@ function App() {
 
   const audioRef = useRef(null);
   const [open, setOpen] = useState(false);
-  const audioSrc = `${import.meta.env.BASE_URL}assets/song1.mp3`;
+  const audioSrc = `${import.meta.env.BASE_URL}assets/song1.mp31`;
 
  const openCurtain = async () => {
   setOpen(true);
@@ -219,23 +219,25 @@ function App() {
     textAlign: "center",
     marginTop: "20px",
     width: "100%",
-    background: "linear-gradient(135deg, rgb(62, 44, 39), rgb(141 110 100))",
-    borderRadius: "17px",
-    padding:"10px",
+    background: "linear-gradient(135deg, rgb(249 245 239), rgb(233 220 205))",
+    // borderRadius: "17px",
+    padding:"0 20px ",
+    display: "flex",justifyContent:'center',alignItems:'center',
+    position: "relative",left:'-19px',
   }}
 >
   {/* First line (Heading) */}
   <h2 style={{ marginBottom: "0px", fontWeight: "100", fontFamily: "Cambria,Cochin,Georgia,Times,Times New Roman,serif",
-    color:"#ffffff",
+    color:"#3b2d28",
     fontSize:"16px",fontStyle:"italic" }}>
-    Create Your Invitation
+    Let us create your dream Invitation
   </h2>
 
   {/* Second line (Buttons) */}
   <div
     style={{
       display: "flex",
-      justifyContent: "center",
+      justifyContent: "end",
       gap: "12px",
       flexWrap: "wrap",
     }}
@@ -249,10 +251,10 @@ function App() {
         display: "inline-flex",
         alignItems: "center",
         gap: "8px",
-        padding: "10px 18px",
+        padding: "10px 0 10px 20px",
         borderRadius: "25px",
         // background: "rgb(80 61 56)",
-        color: "white",
+        color: "#25D366",
         textDecoration: "none",
         fontSize: "25px",
       }}
@@ -263,6 +265,7 @@ function App() {
 
     {/* Instagram Button */}
     <a
+      className='insta-a'
       href="https://instagram.com/rahoof_muhammed_"
       target="_blank"
       rel="noopener noreferrer"
@@ -270,10 +273,10 @@ function App() {
         display: "inline-flex",
         alignItems: "center",
         gap: "8px",
-        padding: "10px 18px",
+        padding: "0 0px 0 18px",
         borderRadius: "25px",
         // background: "rgb(80 61 56)",
-        color: "white",
+        color: "#E1306C",
         textDecoration: "none",
         fontSize: "25px",
       }}
